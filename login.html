@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Seite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login-Seite -->
+    <div id="loginPage" class="page">
+        <h1>Willkommen</h1>
+        <div class="form-container">
+            <input type="text" id="username" placeholder="Benutzername" required>
+            <input type="password" id="password" placeholder="Passwort" required>
+            <button id="loginBtn" class="form-btn">Login</button>
+            <button id="registerBtn" class="form-btn">Registrieren</button>
+        </div>
+        <p id="logoutMessage" class="logout-message" style="display: none;">Hab einen schönen Tag!</p>
+    </div>
+
+    <!-- Registrierungsseite -->
+    <div id="registerPage" class="page" style="display: none;">
+        <h1>Registrierung</h1>
+        <div class="form-container">
+            <input type="text" id="newUsername" placeholder="Neuer Benutzername" required>
+            <input type="password" id="newPassword" placeholder="Neues Passwort" required>
+            <button id="submitRegisterBtn" class="form-btn">Registrieren</button>
+            <button id="backToLoginBtn" class="form-btn">Zurück zum Login</button>
+        </div>
+    </div>
+
+    <!-- Hauptseite -->
+    <div id="mainPage" class="page" style="display: none;">
+        <h1>Willkommen</h1>
+        <div class="buttons-container">
+            <button class="main-btn" id="trailerBtn">Trailer</button>
+            <button class="main-btn" id="leaksBtn">Leaks</button>
+            <button class="main-btn" id="newsBtn">Neuigkeiten</button>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Ausloggen</button>
+    </div>
+
+    <!-- Trailer-Seite -->
+    <div id="trailerPage" class="page" style="display: none;">
+        <h1>Trailer Auswahl</h1>
+        <button class="trailer-btn" id="dragonballBtn">Dragonball</button>
+        <button class="trailer-btn" id="onePieceBtn">One Piece</button>
+        <button id="backBtn1" class="back-btn">Zurück</button>
+        <video id="trailerVideo" width="600" controls style="display: none;">
+            <source id="videoSource" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Leaks-Seite -->
+    <div id="leaksPage" class="page" style="display: none;">
+        <h1>Leaks</h1>
+        <p id="leaksText"></p>
+        <button id="backBtn2" class="back-btn">Zurück</button>
+    </div>
+
+    <!-- Neuigkeiten-Seite -->
+    <div id="newsPage" class="page" style="display: none;">
+        <h1>Neuigkeiten</h1>
+        <p id="newsText"></p>
+        <button id="backBtn3" class="back-btn">Zurück</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
